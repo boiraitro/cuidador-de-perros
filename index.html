@@ -4,71 +4,108 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Servicios de Paseador de Perros</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: 'Roboto', Arial, sans-serif;
+            font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #fefae0;
+            background-color: #f9f9f9;
             color: #333;
         }
         header {
-            background-color: #f4a261;
+            background-color: #4CAF50;
             color: white;
-            padding: 1.5rem;
+            padding: 1rem;
             text-align: center;
-            font-size: 1.8rem;
         }
         nav {
-            text-align: center;
-            margin: 1rem 0;
+            display: flex;
+            justify-content: center;
+            background-color: #333;
         }
         nav a {
-            margin: 0 1rem;
+            color: white;
+            padding: 1rem;
             text-decoration: none;
-            color: #264653;
-            font-weight: bold;
+            text-transform: uppercase;
         }
         nav a:hover {
-            color: #e76f51;
+            background-color: #575757;
         }
         .hero {
             background: url('https://via.placeholder.com/1200x400') no-repeat center center/cover;
-            height: 300px;
+            height: 400px;
             display: flex;
             justify-content: center;
             align-items: center;
             color: white;
-            font-size: 2rem;
-            font-weight: bold;
-            text-shadow: 2px 2px 5px #333;
+            font-size: 2.5rem;
+            text-align: center;
+            padding: 0 1rem;
         }
         .section {
-            padding: 2rem;
+            padding: 2rem 1rem;
             text-align: center;
         }
         .services {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 1.5rem;
+            gap: 2rem;
         }
         .service {
             background-color: white;
-            border: 1px solid #ddd;
             border-radius: 8px;
-            padding: 1.5rem;
-            width: 300px;
-            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            max-width: 300px;
+            text-align: left;
+        }
+        .service img {
+            width: 100%;
+            height: auto;
+        }
+        .service-content {
+            padding: 1rem;
         }
         .service h3 {
-            color: #e76f51;
+            color: #4CAF50;
+            margin-top: 0;
+        }
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: left;
+        }
+        .contact-form label {
+            display: block;
+            margin: 0.5rem 0 0.2rem;
+        }
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 0.5rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .contact-form button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 0.7rem 1.5rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .contact-form button:hover {
+            background-color: #45a049;
         }
         footer {
-            background-color: #264653;
+            background-color: #333;
             color: white;
             text-align: center;
-            padding: 1.5rem;
+            padding: 1rem;
             margin-top: 2rem;
         }
     </style>
@@ -86,37 +123,56 @@
 </nav>
 
 <div class="hero">
-    Como tú, cuidamos a tu mejor amigo con amor y dedicación.
+    <p>¡Cuidamos a tu mejor amigo con amor y dedicación!</p>
 </div>
 
 <section id="about" class="section">
     <h2>Sobre Mí</h2>
-    <p>Hola, soy [Tu Nombre], una amante de los animales con años de experiencia cuidando y paseando perros. Mi misión es asegurar que tu mascota reciba ejercicio, atención y mucho cariño mientras estás ocupado, siempre con seguridad y confianza.</p>
+    <p>Hola, soy [Tu Nombre], una amante de los animales con años de experiencia en el cuidado y paseo de perros. Mi misión es asegurar que tu mascota reciba ejercicio, atención y mucho cariño mientras estás ocupado, brindando seguridad y confianza.</p>
 </section>
 
 <section id="services" class="section">
     <h2>Servicios</h2>
     <div class="services">
         <div class="service">
-            <h3>Paseos Diarios</h3>
-            <p>Sesiones de 30 o 60 minutos adaptadas a las necesidades y energía de tu perro.</p>
+            <img src="https://via.placeholder.com/300x200" alt="Paseos Diarios">
+            <div class="service-content">
+                <h3>Paseos Diarios</h3>
+                <p>Sesiones de 30 o 60 minutos adaptadas a las necesidades y energía de tu perro.</p>
+            </div>
         </div>
         <div class="service">
-            <h3>Cuidado Personalizado</h3>
-            <p>Atención especial en caso de viajes o compromisos importantes.</p>
+            <img src="https://via.placeholder.com/300x200" alt="Cuidado Personalizado">
+            <div class="service-content">
+                <h3>Cuidado Personalizado</h3>
+                <p>Atención especial en caso de viajes o compromisos importantes.</p>
+            </div>
         </div>
         <div class="service">
-            <h3>Socialización</h3>
-            <p>Grupos pequeños donde tu perro puede interactuar de manera segura.</p>
+            <img src="https://via.placeholder.com/300x200" alt="Socialización">
+            <div class="service-content">
+                <h3>Socialización</h3>
+                <p>Grupos pequeños donde tu perro puede interactuar de manera segura.</p>
+            </div>
         </div>
     </div>
 </section>
 
 <section id="contact" class="section">
     <h2>Contacto</h2>
-    <p>¿Listo para que cuidemos de tu mejor amigo?</p>
-    <p>Email: tuemail@ejemplo.com</p>
-    <p>Teléfono: 123-456-7890</p>
+    <p>¿Listo para que cuidemos de tu mejor amigo? Contáctanos a través del siguiente formulario:</p>
+    <form class="contact-form">
+        <label for="name">Nombre:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Correo Electrónico:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Mensaje:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <button type="submit">Enviar</button>
+    </form>
 </section>
 
 <footer>
